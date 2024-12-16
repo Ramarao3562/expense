@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    bat 'xcopy /s /e /i build\\* C:\\inetpub\\wwwroot'
+                    bat 'xcopy /s /e /i /y build\\* C:\\inetpub\\wwwroot'
                 }
             }
         }
